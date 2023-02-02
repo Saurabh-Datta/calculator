@@ -1,0 +1,91 @@
+.calc {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  border-radius: 10px;
+  background-color: #f1f6ea;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons-numbers {
+  display: flex;
+  width: 210px;
+  flex-wrap: wrap;
+}
+
+.buttons-signs {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons-numbers button {
+  background-color: #539f01;
+  border: none;
+  margin: 10px;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-signs button {
+  background-color: #2f79b2;
+  border: none;
+  margin: 10px;
+  color: #ffffff;
+  font-size: 25px;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-signs button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #2f79b2;
+}
+
+.buttons-numbers button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #539f01;
+}
+
+.buttons-decimal-back {
+  display: flex;
+}
+
+.buttons-decimal-back button {
+  background-color: #2f79b2;
+  color: #ffffff;
+}
+
+.buttons-decimal-back button:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px 1px #2f79b2;
+}
+
+.buttons-clear-equals {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.buttons-clear-equals button {
+  width: 120px;
+  font-size: 30px;
+  padding: 5px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  border: none;
+}
