@@ -53,12 +53,16 @@
 
 .buttons-signs button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 1px #2f79b2;
+  background-color: #ffffff;
+  color:#2f79b2;
+  transition-delay: 30ms;
 }
 
 .buttons-numbers button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 1px #539f01;
+  background-color: #ffffff;
+  color: #539f01;
+  transition-delay: 30ms;
 }
 
 .buttons-decimal-back {
@@ -72,7 +76,9 @@
 
 .buttons-decimal-back button:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 5px 1px #2f79b2;
+  background-color: #ffffff;
+  color:#2f79b2;
+  transition-delay: 30ms;
 }
 
 .buttons-clear-equals {
@@ -88,4 +94,40 @@
   margin: 10px 5px;
   border-radius: 10px;
   border: none;
+}
+
+#clear {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#clear:hover {
+  cursor: pointer;
+  background-color: #ff0000;
+}
+
+#equals {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+#equals:hover {
+  cursor: pointer;
+  background-color: #539f01;
+  color: #ffffff;
+}
+
+input {
+  width: 80%;
+  margin: 10px 0px;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 15px;
+  border: 1px solid #539f01;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #2f79b2;
 }
