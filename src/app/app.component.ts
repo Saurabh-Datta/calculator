@@ -21,8 +21,15 @@ export class AppComponent {
   evaluate() {
     if (this.value=='0')
       return;
-    this.value = eval(this.current);
-    this.current = this.value;
+    try {
+      this.value = eval(this.current);
+      this.current = this.value;
+    }
+    catch {
+      this.value = 'Invalid';
+      this.current = '';
+    }
+
   }
   clear() {
     this.current = '';
@@ -36,8 +43,11 @@ export class AppComponent {
   calculate(operation:any) {
     if(operation.charAt(0) == '0')
       operation = operation.slice(1,);
-    this.value = eval(operation);
-
+    try {
+      this.value = eval(operation);
+    } catch {
+      this.value = 'Invalid';
+    }
   }
 
 }
