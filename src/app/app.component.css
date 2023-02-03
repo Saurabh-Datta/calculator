@@ -134,7 +134,9 @@ input:focus {
 
 .container {
   display: flex;
-  height: 560px;
+  height: 595.333px;
   justify-content: center;
   align-items: center;
+  background-image: url("../assets/bg.jpg");
+  background-size: cover;
 }
