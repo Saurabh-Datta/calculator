@@ -1,4 +1,4 @@
-.calc {
+.calculator {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -130,4 +130,11 @@ input {
 input:focus {
   outline: none;
   border: 1px solid #2f79b2;
+}
+
+.container {
+  display: flex;
+  height: 560px;
+  justify-content: center;
+  align-items: center;
 }

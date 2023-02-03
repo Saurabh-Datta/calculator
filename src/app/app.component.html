@@ -1,31 +1,33 @@
-<div class="calc">
-  <input type="text" name="" id="">
-  <div class="buttons">
-    <div class="buttons-numbers">
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>0</button>
-      <div class="buttons-decimal-back">
-        <button>.</button>
-        <button><mat-icon>backspace</mat-icon></button>
+<div class="container">
+  <div class="calculator">
+    <input type="text" [(ngModel)] = "value">
+    <div class="buttons">
+      <div class="buttons-numbers">
+        <button (click)="addToInput('1')">1</button>
+        <button (click)="addToInput('2')">2</button>
+        <button (click)="addToInput('3')">3</button>
+        <button (click)="addToInput('4')">4</button>
+        <button (click)="addToInput('5')">5</button>
+        <button (click)="addToInput('6')">6</button>
+        <button (click)="addToInput('7')">7</button>
+        <button (click)="addToInput('8')">8</button>
+        <button (click)="addToInput('9')">9</button>
+        <button (click)="addToInput('0')">0</button>
+        <div class="buttons-decimal-back">
+          <button (click)="addToInput('.')">.</button>
+          <button (click)="remove()"><mat-icon>backspace</mat-icon></button>
+        </div>
+      </div>
+      <div class="buttons-signs">
+        <button (click)="addToInput('+')"><mat-icon>add</mat-icon></button>
+        <button (click)="addToInput('-')"><mat-icon>remove</mat-icon></button>
+        <button (click)="addToInput('*')">*</button>
+        <button (click)="addToInput('/')">/</button>
       </div>
     </div>
-    <div class="buttons-signs">
-      <button><mat-icon>add</mat-icon></button>
-      <button><mat-icon>remove</mat-icon></button>
-      <button>*</button>
-      <button>/</button>
+    <div class="buttons-clear-equals">
+      <button id="clear" (click)="clear()"><mat-icon>delete</mat-icon></button>
+      <button id="equals" (click)="evaluate()">=</button>
     </div>
-  </div>
-  <div class="buttons-clear-equals">
-    <button id="clear"><mat-icon>delete</mat-icon></button>
-    <button id="equals"><mat-icon>done</mat-icon></button>
   </div>
 </div>
