@@ -10,9 +10,12 @@ export class AppComponent {
   value = '0';
   current = '';
   addToInput(item:string) {
+    if(this.current == '0')
+      this.current = this.value;
     if(item=='.' && this.current.slice(-1)=='.')
       return;
-    this.current += item;
+    if(this.current != '0')
+      this.current += item;
     this.value = this.current;
   }
   evaluate() {
@@ -27,6 +30,14 @@ export class AppComponent {
   }
   remove() {
     this.current = this.current.slice(0,-1);
-    this.value = this.current==''?'0':this.current;
+    this.value = this.current;
+    this.value = this.value==''?'0':this.value;
   }
+  calculate(operation:any) {
+    if(operation.charAt(0) == '0')
+      operation = operation.slice(1,);
+    this.value = eval(operation);
+
+  }
+
 }

@@ -1,6 +1,6 @@
 <div class="container">
   <div class="calculator">
-    <input type="text" [(ngModel)] = "value">
+    <input #display (keyup.enter)="calculate(display.value)" type="text" [(ngModel)] = "value">
     <div class="buttons">
       <div class="buttons-numbers">
         <button (click)="addToInput('1')">1</button>
